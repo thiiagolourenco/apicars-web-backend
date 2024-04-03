@@ -25,6 +25,10 @@ Pensando no desafio foi definido 3 principais pilares:
 
 **2.** O banco de dados: se tratando de um desafio de dados relacionais foi escolhido o PostgreSQL por ser um banco robusto e escalável para esse tipo de dados.
 
+<div style="display:flex;align-items:center;">
+    <img src="/src/main/resources/static/img/relational_modeling.png" title="Relational Modeling" alt="Relational Modeling" width="480px" />
+</div>
+
 **3.** Deploy: no geral a ideia era fazer o deploy do serviço em um ambiente nuvem para que tudo ficasse escalável e disponível para os revisores. Já havia trabalhado com o Heroku e AWS, mas entre esses dois decidi pelo Heroku por ser totalmente gratuito nesse caso e já ter feito exatamente esse processo com ele e o Spring.
 
 No fim, por ser um projeto simples foi escolhido o modelo tradicional de **Design Patterns** utilizando conceitos de _MVC_, _Solid_ e _clean code_.
@@ -38,6 +42,7 @@ No fim, por ser um projeto simples foi escolhido o modelo tradicional de **Desig
 Para que ficasse mais claro e simples no commit as estórias foram definidas como **nome_do_projeto-número_da_estória**, por exemplo: APICARS-08. Sabendo disso, após analisar o desafio foram definidas as seguintes estórias de usuário:
 
 **1.** ESTÓRIAS RELACIONADAS COM USUÁRIO NÃO AUTENTICADO:
+
 - APICARS-00: EU COMO usuário QUERO um sistema que tenha usuário e seus carros PARA gerênciar esses indivíduos.
 - APICARS-01: EU COMO novo usuário QUERO me cadastrar no sistema PARA ter acesso completo ao sistema. (POST)
 - APICARS-02: EU COMO usuário não autenticado QUERO listar os usuários do sistema PARA ver quem está cadastrado. (GET)
@@ -46,6 +51,7 @@ Para que ficasse mais claro e simples no commit as estórias foram definidas com
 - APICARS-05: EU COMO usuário não autenticado QUERO editar um usuário pelo seu id PARA atualizar alguma informação do usuário. (PUT)
 
 **2.** ESTÓRIAS RELACIONADAS COM USUÁRIO AUTENTICADO:
+
 - APICARS-06: EU COMO usuário já cadastrado QUERO me logar no sistema PARA utilizar todas as funcionalidades do mesmo. (POST)
 - APICARS-07: EU COMO usuário logado QUERO listar todos os meus carros PARA gerencia-los. (GET ou POST)
 - APICARS-08: EU COMO usuário logado QUERO cadastrar um novo carro PARA que ele vá para a lista dos meus carros. (POST)
