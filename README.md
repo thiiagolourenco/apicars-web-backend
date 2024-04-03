@@ -1,5 +1,5 @@
 <h1 align="center">
-    API REST DE USUÁRIO E SEUS CARROS
+    API REST DE USUÁRIOS E SEUS CARROS
 </h1>
 
 <p align="center">
@@ -30,7 +30,7 @@ Pensando no desafio foi definido 3 principais pilares:
 No fim, por ser um projeto simples foi escolhido o modelo tradicional de **Design Patterns** utilizando conceitos de _MVC_, _Solid_ e _clean code_.
 
 <div style="display:flex;align-items:center;">
-    <img src="./src/main/resources/static/img" title="Architecture" alt="architecture" width="80px" />
+    <img src="/src/main/resources/static/img" title="Architecture" alt="architecture" width="80px" />
 </div>
 
 ## 💡 Estórias de usuário
