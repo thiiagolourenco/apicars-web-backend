@@ -66,7 +66,7 @@ Para contribuir com o projeto é necessário os seguintes requisitos:
 
 ## 🚀 Tecnologias
 
-Esse projeto foi desenvolvido utilizando o framework [Java Spring 3.2.4](https://spring.io/) com os seguintes itens:
+Esse projeto foi desenvolvido utilizando o framework [Java Spring 3.2.4](https://spring.io/) com os seguintes dependências:
 
 - Maven,
 - Spring Web,
