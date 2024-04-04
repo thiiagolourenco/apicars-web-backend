@@ -85,4 +85,4 @@ Esse projeto foi desenvolvido utilizando o framework [Java Spring 3.2.4](https:/
 
 ## 📝 Autor
 
-**By Thiago Lourenço** dá uma olhadinha no [LinkedIn](https://www.linkedin.com/in/thiiagolourenco) e no meu [Medium](https://thiiagolourenco.medium.com/) ✌🏽 
+Por **Thiago Lourenço** dá uma olhadinha no [LinkedIn](https://www.linkedin.com/in/thiiagolourenco) e no meu [Medium](https://thiiagolourenco.medium.com/) ✌🏽 
