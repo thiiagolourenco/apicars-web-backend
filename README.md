@@ -31,7 +31,7 @@ Pensando no desafio foi definido 3 principais pilares:
 
 **3.** Deploy: no geral a ideia era fazer o deploy do serviço em um ambiente nuvem para que tudo ficasse escalável e disponível para os revisores. Já havia trabalhado com o Heroku e AWS, mas entre esses dois decidi pelo Heroku por ser totalmente gratuito nesse caso e já ter feito exatamente esse processo com ele e o Spring.
 
-No fim, por ser um projeto simples foi escolhido o modelo tradicional de **Design Patterns** utilizando conceitos de _MVC_, _Solid_ e _clean code_ (estrutura de pastas).
+No fim, por ser um projeto simples foi escolhido o modelo tradicional de **Design Patterns** utilizando conceitos de _MVC_, _Solid_ e _clean code_.
 
 <div style="display:flex;align-items:center;">
     <img src="/src/main/resources/static/img/architecture.png" title="Architecture" alt="architecture" width="480px" />
