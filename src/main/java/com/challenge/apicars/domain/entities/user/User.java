@@ -1,4 +1,4 @@
-package com.challenge.apicars.domain.user;
+package com.challenge.apicars.domain.entities.user;
 
 import jakarta.persistence.Entity;
 
