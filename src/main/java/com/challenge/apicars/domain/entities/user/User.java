@@ -51,4 +51,17 @@ public class User {
 	
 	@OneToMany(mappedBy = "owner")
 	private List<Car> cars = new ArrayList<Car>();
+	
+	public User(UserDTO userDTO) {
+		this.firstName = userDTO.getFirstName();
+		this.lastName = userDTO.getLastName();
+		this.email = userDTO.getEmail();
+		this.birthday = userDTO.getBirthday();
+		this.lastLogin = userDTO.getLastLogin();
+		this.createdAt = userDTO.getCreatedAt();
+		this.login = userDTO.getLogin();
+		this.password = userDTO.getPassword();
+		this.phone = userDTO.getPhone();
+		this.cars = userDTO.getCars();
+	}
 }
