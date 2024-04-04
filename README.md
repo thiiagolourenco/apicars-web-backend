@@ -59,6 +59,8 @@ Para que ficasse mais claro e simples no commit as estórias foram definidas com
 - APICARS-10: EU COMO usuário logado QUERO remover um carro pelo seu id PARA QUE excluir suas informações. (DELETE)
 - APICARS-11: EU COMO usuário logado QUERO editar um carro pelo seu id PARA QUE atualizar alguma informação do carro. (PUT)
 
+**OBS.:** Dessa maneira as branchs terão nomes como: **APICARS-número_estória_o_que_será_feito -> APICARS-01_USER_SIGNUP.**
+
 ## 📝 Pré-requisitos
 
 Para contribuir com o projeto é necessário os seguintes requisitos:
