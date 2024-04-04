@@ -16,7 +16,7 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity(name="car")
+@Entity(name="cars")
 @Table(name="cars")
 @Getter
 @Setter
