@@ -21,7 +21,7 @@
 
 Pensando no desafio foi definido 3 principais pilares:
 
-**1.** A framework: Java Spring que permite a criação de uma API Rest robusta. Dentro do projeto foram escolhidas algumas dependências dentre elas: Lombok e DevTools (simplificando o desenvolvimento e reduzindo a quantidade de código), Spring Web e Security (para criação de Endpoints e das suas proteções), JPA/Hibernate (facilitar a integração com o banco) e H2 (para um banco de testes locais).
+**1.** A framework: Java Spring que permite a criação de uma API Rest robusta. Dentro do projeto foram escolhidas algumas dependências dentre elas: Lombok e DevTools (simplificando o desenvolvimento e reduzindo a quantidade de código), Spring Web e Security (para criação de Endpoints e das suas proteções), JPA/Hibernate (facilitar a integração com o banco) e H2 (para um banco de testes locais). Focando na parte dos testes unitários foram escolhidas as bibliotecas do Junit e Mockito, respectivamente, para criamos os testes e seus mocks.
 
 **2.** O banco de dados: se tratando de um desafio de dados relacionais foi escolhido o PostgreSQL por ser um banco robusto e escalável para esse tipo de dados.
 
