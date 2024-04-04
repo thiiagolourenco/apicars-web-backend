@@ -1,5 +1,7 @@
 package com.challenge.apicars.application.services.user;
 
+import java.time.LocalDateTime;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +20,7 @@ public class UserService {
 	private UserMapping mapping;
 
 	public UserDTO singUp(UserDTO newUser) {
+		newUser.setCreatedAt(LocalDateTime.now());
 		User result = this.repository.save(this.mapping.toUser(newUser));
 		return this.mapping.toDTO(result);
 	}
