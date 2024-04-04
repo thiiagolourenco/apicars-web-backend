@@ -17,7 +17,7 @@ public class UserService {
 	@Autowired
 	private UserMapping mapping;
 
-	public UserDTO singUp(UserDTO newUser) throws Exception {
+	public UserDTO singUp(UserDTO newUser) {
 		User result = this.repository.save(this.mapping.toUser(newUser));
 		return this.mapping.toDTO(result);
 	}
