@@ -37,4 +37,8 @@ public class UserService {
 			throw new Exception("Usuário não foi encontrado!");
 		}
 	}
+	
+	public void deleteUserById(Long userId) throws Exception {
+		this.repository.deleteById(userId);
+	}
 }
