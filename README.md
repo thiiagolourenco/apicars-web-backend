@@ -47,7 +47,7 @@ Para que ficasse mais claro e simples no commit as estórias foram definidas com
 - ✔️APICARS-01: EU COMO novo usuário QUERO me cadastrar no sistema PARA ter acesso completo ao sistema. (POST)
 - ✔️APICARS-02: EU COMO usuário não autenticado QUERO listar os usuários do sistema PARA ver quem está cadastrado. (GET)
 - ✔️APICARS-03: EU COMO usuário não autenticado QUERO buscar um usuário pelo seu id PARA ver as suas informações. (GET)
-- APICARS-04: EU COMO usuário não autenticado QUERO remover um usuário pelo seu id PARA excluir suas informações. (DELETE)
+- ✔️APICARS-04: EU COMO usuário não autenticado QUERO remover um usuário pelo seu id PARA excluir suas informações. (DELETE)
 - APICARS-05: EU COMO usuário não autenticado QUERO editar um usuário pelo seu id PARA atualizar alguma informação do usuário. (PUT)
 
 **2.** ESTÓRIAS RELACIONADAS COM USUÁRIO AUTENTICADO:
@@ -66,7 +66,7 @@ Para que ficasse mais claro e simples no commit as estórias foram definidas com
 Para contribuir com o projeto é necessário os seguintes requisitos:
 
 - GIT,
-- Java 11,
+- Java 17,
 - PostgreSQL 12 e PgAdmin,
 - Heroku CLI,
 - IDE Java da sua escolha (recomendação: [STS](https://spring.io/tools)),
