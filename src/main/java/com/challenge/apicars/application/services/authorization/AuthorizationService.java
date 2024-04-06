@@ -65,7 +65,7 @@ public class AuthorizationService implements UserDetailsService {
 
 		User savedUser = this.authorizationRepository.save(this.mapping.toUser(newUser));
 
-		return new ResponseEntity<Object>("Usuário" + savedUser.getId() + "criado com sucesso!", HttpStatus.CREATED);
+		return new ResponseEntity<Object>("Usuário " + savedUser.getId() + " criado com sucesso!", HttpStatus.CREATED);
 	}
 
 }
