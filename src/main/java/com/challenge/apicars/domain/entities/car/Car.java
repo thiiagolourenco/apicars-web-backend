@@ -10,7 +10,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -34,7 +33,7 @@ public class Car {
 	@JoinColumn(name = "user_id")
 	private User owner;
 	
-	private Integer year;
+	private Integer car_year;
 	
 	@Column(unique = true)
 	private String licensePlate;
