@@ -29,6 +29,7 @@ public class UserDTO implements Serializable {
 	private LocalDateTime lastLogin;
 	private LocalDateTime createdAt;
 	private String login;
+	private UserRole role;
 	private String password;
 	private String phone;
 	private List<Car> cars = new ArrayList<Car>();
@@ -41,6 +42,7 @@ public class UserDTO implements Serializable {
 		this.lastLogin = user.getLastLogin();
 		this.createdAt = user.getCreatedAt();
 		this.login = user.getLogin();
+		this.role = user.getRole();
 		this.password = user.getPassword();
 		this.phone = user.getPhone();
 		this.cars = user.getCars();

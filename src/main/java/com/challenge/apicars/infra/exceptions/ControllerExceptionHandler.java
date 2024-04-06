@@ -24,9 +24,9 @@ public class ControllerExceptionHandler {
 	}
 
 	@ExceptionHandler(Exception.class)
-	public ResponseEntity<ExceptionDTO> threatGeneralException(Exception exception) {
-		ExceptionDTO exceptionDTO = new ExceptionDTO(exception.getMessage(), "500");
-		return ResponseEntity.internalServerError().body(exceptionDTO);
-	}
+    public ResponseEntity threatGeneralException(Exception exception){
+        ExceptionDTO exceptionDTO = new ExceptionDTO(exception.getMessage(), "500");
+        return ResponseEntity.internalServerError().body(exceptionDTO);
+    }
 
 }
