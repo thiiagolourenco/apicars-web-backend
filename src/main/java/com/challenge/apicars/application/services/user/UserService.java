@@ -1,6 +1,7 @@
 package com.challenge.apicars.application.services.user;
 
-import java.util.Optional;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,12 +20,8 @@ public class UserService {
 	@Autowired
 	private UserMapping mapping;
 
-	public UserDTO findUserById(Long userId) throws Exception {
-		Optional<User> foundedUser = this.repository.findUserById(userId);
-		if (!foundedUser.isEmpty()) {
-			return this.mapping.toDTO(foundedUser.get());
-		} else {
-			throw new Exception("Usuário não foi encontrado!");
-		}
+	public List<UserDTO> findAllUsers() {
+		List<User> users = this.repository.findAll();
+		return users.stream().map(user -> this.mapping.toDTO(user)).collect(Collectors.toList());
 	}
 }

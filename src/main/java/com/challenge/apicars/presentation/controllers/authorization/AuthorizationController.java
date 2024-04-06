@@ -14,7 +14,7 @@ import com.challenge.apicars.infra.security.model.Login;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("auth")
+@RequestMapping("/auth")
 public class AuthorizationController {
 	@Autowired
 	AuthorizationService authorizationService;
