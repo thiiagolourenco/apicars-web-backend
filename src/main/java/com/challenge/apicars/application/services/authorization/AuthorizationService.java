@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -62,9 +63,9 @@ public class AuthorizationService implements UserDetailsService {
 		newUser.setCreatedAt(LocalDateTime.now());
 		newUser.setPassword(encryptedPassword);
 
-		this.authorizationRepository.save(this.mapping.toUser(newUser));
+		User savedUser = this.authorizationRepository.save(this.mapping.toUser(newUser));
 
-		return ResponseEntity.ok().build();
+		return new ResponseEntity<Object>("Usuário" + savedUser.getId() + "criado com sucesso!", HttpStatus.CREATED);
 	}
 
 }
