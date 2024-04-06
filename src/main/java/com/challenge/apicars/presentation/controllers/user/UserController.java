@@ -20,8 +20,7 @@ public class UserController {
 
 	@GetMapping
 	public ResponseEntity<List<UserDTO>> findAll() {
-		List<UserDTO> users = this.service.findAllUsers();
-		return ResponseEntity.ok(users);
+		return ResponseEntity.ok(this.service.findAllUsers());
 	}
 
 }
