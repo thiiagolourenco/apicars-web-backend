@@ -5,7 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import com.challenge.apicars.domain.entities.exception.ExceptionDTO;
+import com.challenge.apicars.infra.exceptions.model.ExceptionDTO;
 
 import jakarta.persistence.EntityNotFoundException;
 
@@ -19,12 +19,12 @@ public class ControllerExceptionHandler {
 	}
 
 	@ExceptionHandler(EntityNotFoundException.class)
-	public ResponseEntity threatNotFound(EntityNotFoundException exception) {
+	public ResponseEntity<Object> threatNotFound(EntityNotFoundException exception) {
 		return ResponseEntity.notFound().build();
 	}
 
 	@ExceptionHandler(Exception.class)
-    public ResponseEntity threatGeneralException(Exception exception){
+    public ResponseEntity<Object> threatGeneralException(Exception exception){
         ExceptionDTO exceptionDTO = new ExceptionDTO(exception.getMessage(), "500");
         return ResponseEntity.internalServerError().body(exceptionDTO);
     }

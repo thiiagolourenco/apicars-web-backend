@@ -15,12 +15,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import com.challenge.apicars.application.mappings.user.UserMapping;
-import com.challenge.apicars.domain.entities.authorization.Login;
-import com.challenge.apicars.domain.entities.authorization.LoginResponse;
 import com.challenge.apicars.domain.entities.user.User;
 import com.challenge.apicars.domain.entities.user.UserDTO;
 import com.challenge.apicars.infra.repositories.authorization.AuthorizationRepository;
 import com.challenge.apicars.infra.security.TokenService;
+import com.challenge.apicars.infra.security.model.Login;
+import com.challenge.apicars.infra.security.model.LoginResponse;
 
 import jakarta.validation.Valid;
 

@@ -15,11 +15,11 @@ import com.challenge.apicars.domain.entities.user.UserDTO;
 @RequestMapping(value = "/users")
 public class UserController {
 
-	@Autowired
-	private  UserService service;
-	
-	@PostMapping
-	public ResponseEntity<UserDTO> singUp(@RequestBody UserDTO newUser) {
-		return new ResponseEntity<UserDTO>(this.service.singUp(newUser), HttpStatus.CREATED);
-	}
+	/*
+	 * @Autowired private UserService service;
+	 * 
+	 * @PostMapping public ResponseEntity<UserDTO> singUp(@RequestBody UserDTO
+	 * newUser) { return new ResponseEntity<UserDTO>(this.service.singUp(newUser),
+	 * HttpStatus.CREATED); }
+	 */
 }

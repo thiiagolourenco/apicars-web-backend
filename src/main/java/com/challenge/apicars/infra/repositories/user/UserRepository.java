@@ -1,11 +1,11 @@
 package com.challenge.apicars.infra.repositories.user;
 
-import java.util.UUID;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.challenge.apicars.domain.entities.user.User;
 
-public interface UserRepository extends JpaRepository<User, UUID> {
-
+public interface UserRepository extends JpaRepository<User, Long> {
+	public Optional<User> findUserById(Long id);
 }

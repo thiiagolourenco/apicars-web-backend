@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.challenge.apicars.application.services.authorization.AuthorizationService;
-import com.challenge.apicars.domain.entities.authorization.Login;
 import com.challenge.apicars.domain.entities.user.UserDTO;
+import com.challenge.apicars.infra.security.model.Login;
 
 import jakarta.validation.Valid;
 
