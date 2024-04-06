@@ -43,16 +43,16 @@ Para que ficasse mais claro e simples no commit as estórias foram definidas com
 
 **1.** ESTÓRIAS RELACIONADAS COM USUÁRIO NÃO AUTENTICADO:
 
-- APICARS-00: EU COMO usuário QUERO um sistema que tenha usuário e seus carros PARA gerênciar esses indivíduos.
-- APICARS-01: EU COMO novo usuário QUERO me cadastrar no sistema PARA ter acesso completo ao sistema. (POST)
-- APICARS-02: EU COMO usuário não autenticado QUERO listar os usuários do sistema PARA ver quem está cadastrado. (GET)
+- ✔️APICARS-00: EU COMO usuário QUERO um sistema que tenha usuário e seus carros PARA gerênciar esses indivíduos.
+- ✔️APICARS-01: EU COMO novo usuário QUERO me cadastrar no sistema PARA ter acesso completo ao sistema. (POST)
+- ✔️APICARS-02: EU COMO usuário não autenticado QUERO listar os usuários do sistema PARA ver quem está cadastrado. (GET)
 - APICARS-03: EU COMO usuário não autenticado QUERO buscar um usuário pelo seu id PARA ver as suas informações. (GET)
 - APICARS-04: EU COMO usuário não autenticado QUERO remover um usuário pelo seu id PARA excluir suas informações. (DELETE)
 - APICARS-05: EU COMO usuário não autenticado QUERO editar um usuário pelo seu id PARA atualizar alguma informação do usuário. (PUT)
 
 **2.** ESTÓRIAS RELACIONADAS COM USUÁRIO AUTENTICADO:
 
-- APICARS-06: EU COMO usuário já cadastrado QUERO me logar no sistema PARA utilizar todas as funcionalidades do mesmo. (POST)
+- ✔️APICARS-06: EU COMO usuário já cadastrado QUERO me logar no sistema PARA utilizar todas as funcionalidades do mesmo. (POST)
 - APICARS-07: EU COMO usuário logado QUERO listar todos os meus carros PARA gerencia-los. (GET ou POST)
 - APICARS-08: EU COMO usuário logado QUERO cadastrar um novo carro PARA que ele vá para a lista dos meus carros. (POST)
 - APICARS-09: EU COMO usuário logado QUERO buscar um carro pelo seu id PARA QUE ver as suas informações. (GET)
