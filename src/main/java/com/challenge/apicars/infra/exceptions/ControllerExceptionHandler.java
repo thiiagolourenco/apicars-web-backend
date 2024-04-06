@@ -11,21 +11,22 @@ import jakarta.persistence.EntityNotFoundException;
 
 @RestControllerAdvice
 public class ControllerExceptionHandler {
-	
+
 	@ExceptionHandler(DataIntegrityViolationException.class)
-    public ResponseEntity<ExceptionDTO> threatDuplicateUser(DataIntegrityViolationException exception) {
-        ExceptionDTO exceptionDTO = new ExceptionDTO("Usuário já cadastrado", "400");
-        return ResponseEntity.badRequest().body(exceptionDTO);
-    }
-	
+	public ResponseEntity<ExceptionDTO> threatDuplicateUser(DataIntegrityViolationException exception) {
+		ExceptionDTO exceptionDTO = new ExceptionDTO("User already exists", "400");
+		return ResponseEntity.badRequest().body(exceptionDTO);
+	}
+
 	@ExceptionHandler(EntityNotFoundException.class)
-    public ResponseEntity threatNotFound(EntityNotFoundException exception) {
-        return ResponseEntity.notFound().build();
-    }
-	
+	public ResponseEntity threatNotFound(EntityNotFoundException exception) {
+		return ResponseEntity.notFound().build();
+	}
+
 	@ExceptionHandler(Exception.class)
-    public ResponseEntity<ExceptionDTO> threatGeneralException(Exception exception){
-        ExceptionDTO exceptionDTO = new ExceptionDTO(exception.getMessage(), "500");
-        return ResponseEntity.internalServerError().body(exceptionDTO);
-    }
+	public ResponseEntity<ExceptionDTO> threatGeneralException(Exception exception) {
+		ExceptionDTO exceptionDTO = new ExceptionDTO(exception.getMessage(), "500");
+		return ResponseEntity.internalServerError().body(exceptionDTO);
+	}
+
 }
