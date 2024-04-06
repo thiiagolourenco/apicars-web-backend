@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.challenge.apicars.application.mappings.user.UserMapping;
+import com.challenge.apicars.application.services.user.model.UpdateUser;
 import com.challenge.apicars.domain.entities.user.User;
 import com.challenge.apicars.domain.entities.user.UserDTO;
 import com.challenge.apicars.infra.repositories.user.UserRepository;
@@ -40,5 +41,23 @@ public class UserService {
 	
 	public void deleteUserById(Long userId) throws Exception {
 		this.repository.deleteById(userId);
+	}
+	
+	public UserDTO updateUserById(Long userId,  UpdateUser newUser) throws Exception {
+		Optional<User> pastUser = this.repository.findUserById(userId);
+		if (!pastUser.isEmpty()) {
+			User editedUser = pastUser.get();
+			
+			editedUser.setFirstName(newUser.firstName());
+			editedUser.setLastName(newUser.lastName());
+			editedUser.setEmail(newUser.email());
+			editedUser.setBirthday(newUser.birthday());
+			editedUser.setPhone(newUser.phone());
+			
+			User savedUser = this.repository.save(editedUser);
+			return this.mapping.toDTO(savedUser);
+		} else {
+			throw new Exception("Não foi possível editar o usuário!");
+		} 
 	}
 }

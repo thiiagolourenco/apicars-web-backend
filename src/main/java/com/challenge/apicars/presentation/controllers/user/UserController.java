@@ -5,13 +5,10 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.challenge.apicars.application.services.user.UserService;
+import com.challenge.apicars.application.services.user.model.UpdateUser;
 import com.challenge.apicars.domain.entities.user.UserDTO;
 
 import jakarta.validation.Valid;
@@ -33,6 +30,11 @@ public class UserController {
 		return ResponseEntity.ok(this.service.findUserById(id));
 	}
 
+	@PutMapping(value = "/{id}")
+	public ResponseEntity<UserDTO> updateUserById(@PathVariable @Valid Long id, @RequestBody @Valid UpdateUser data) throws Exception {
+		return new ResponseEntity<UserDTO>(this.service.updateUserById(id, data),HttpStatus.OK);
+	}
+	
 	@DeleteMapping(value = "/{id}")
 	public ResponseEntity<Void> deleteUserById(@PathVariable @Valid Long id) throws Exception {
 		this.service.deleteUserById(id);
