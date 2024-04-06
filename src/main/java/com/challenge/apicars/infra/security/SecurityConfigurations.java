@@ -30,6 +30,7 @@ public class SecurityConfigurations {
 						.requestMatchers(HttpMethod.GET, "/api/users").permitAll()
 						.requestMatchers(HttpMethod.GET, "/api/users/{id}").permitAll()
 						.requestMatchers(HttpMethod.DELETE, "/api/users/{id}").permitAll()
+						.requestMatchers(HttpMethod.PUT, "/api/users/{id}").permitAll()
 						.anyRequest().authenticated())
 				.addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class).build();
 	}

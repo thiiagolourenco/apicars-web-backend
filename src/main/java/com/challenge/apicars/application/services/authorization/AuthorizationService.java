@@ -1,6 +1,7 @@
 package com.challenge.apicars.application.services.authorization;
 
 import java.time.LocalDateTime;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -16,12 +17,13 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import com.challenge.apicars.application.mappings.user.UserMapping;
+import com.challenge.apicars.application.services.authorization.model.Login;
+import com.challenge.apicars.application.services.authorization.model.LoginResponse;
 import com.challenge.apicars.domain.entities.user.User;
 import com.challenge.apicars.domain.entities.user.UserDTO;
 import com.challenge.apicars.infra.repositories.authorization.AuthorizationRepository;
+import com.challenge.apicars.infra.repositories.user.UserRepository;
 import com.challenge.apicars.infra.security.TokenService;
-import com.challenge.apicars.infra.security.model.Login;
-import com.challenge.apicars.infra.security.model.LoginResponse;
 
 import jakarta.validation.Valid;
 
@@ -39,6 +41,9 @@ public class AuthorizationService implements UserDetailsService {
 	@Autowired
 	private UserMapping mapping;
 
+	@Autowired
+	private UserRepository userRepository;
+
 	private AuthenticationManager authenticationManager;
 
 	@Override
@@ -52,6 +57,14 @@ public class AuthorizationService implements UserDetailsService {
 		var usernamePassword = new UsernamePasswordAuthenticationToken(data.login(), data.password());
 		var auth = this.authenticationManager.authenticate(usernamePassword);
 		var token = tokenService.generateToken((User) auth.getPrincipal());
+
+		Optional<User> pastUser = this.userRepository.findUserByLogin(data.login());
+		if (!pastUser.isEmpty()) {
+			User editedUser = pastUser.get();
+			editedUser.setLastLogin(LocalDateTime.now());
+			this.userRepository.save(editedUser);
+		}
+
 		return ResponseEntity.ok(new LoginResponse(token));
 	}
 
