@@ -66,7 +66,7 @@ Para que ficasse mais claro e simples no commit as estórias foram definidas com
 Para contribuir com o projeto é necessário os seguintes requisitos:
 
 - GIT,
-- Java 11,
+- Java 17,
 - PostgreSQL 12 e PgAdmin,
 - Heroku CLI,
 - IDE Java da sua escolha (recomendação: [STS](https://spring.io/tools)),
