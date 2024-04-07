@@ -43,7 +43,7 @@ public class UserService {
 		this.repository.deleteById(userId);
 	}
 	
-	public UserDTO updateUserById(Long userId,  UpdateUser newUser) throws Exception {
+	public UserDTO updateUserById(Long userId, UpdateUser newUser) throws Exception {
 		Optional<User> pastUser = this.repository.findUserById(userId);
 		if (!pastUser.isEmpty()) {
 			User editedUser = pastUser.get();
@@ -57,7 +57,7 @@ public class UserService {
 			User savedUser = this.repository.save(editedUser);
 			return this.mapping.toDTO(savedUser);
 		} else {
-			throw new Exception("Unable to edit the user!");
+			throw new Exception("Unable to edit the user data!");
 		} 
 	}
 }

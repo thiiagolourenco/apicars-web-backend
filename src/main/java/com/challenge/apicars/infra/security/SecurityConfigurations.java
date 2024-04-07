@@ -32,7 +32,10 @@ public class SecurityConfigurations {
 						.requestMatchers(HttpMethod.DELETE, "/api/users/{id}").permitAll()
 						.requestMatchers(HttpMethod.PUT, "/api/users/{id}").permitAll()
 						.requestMatchers(HttpMethod.POST, "/api/cars").permitAll()
-						.requestMatchers(HttpMethod.GET, "/api/cars/{userId}").permitAll()
+						.requestMatchers(HttpMethod.GET, "/api/cars/by-user/{userId}").permitAll()
+						.requestMatchers(HttpMethod.GET, "/api/cars/{id}").permitAll()
+						.requestMatchers(HttpMethod.DELETE, "/api/cars/{id}").permitAll()
+						.requestMatchers(HttpMethod.PUT, "/api/cars/{id}").permitAll()
 						.anyRequest().authenticated())
 				.addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class).build();
 	}
