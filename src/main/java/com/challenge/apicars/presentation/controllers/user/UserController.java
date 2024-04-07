@@ -31,10 +31,11 @@ public class UserController {
 	}
 
 	@PutMapping(value = "/{id}")
-	public ResponseEntity<UserDTO> updateUserById(@PathVariable @Valid Long id, @RequestBody @Valid UpdateUser data) throws Exception {
-		return new ResponseEntity<UserDTO>(this.service.updateUserById(id, data),HttpStatus.OK);
+	public ResponseEntity<UserDTO> updateUserById(@PathVariable @Valid Long id, @RequestBody @Valid UpdateUser data)
+			throws Exception {
+		return new ResponseEntity<UserDTO>(this.service.updateUserById(id, data), HttpStatus.OK);
 	}
-	
+
 	@DeleteMapping(value = "/{id}")
 	public ResponseEntity<Void> deleteUserById(@PathVariable @Valid Long id) throws Exception {
 		this.service.deleteUserById(id);

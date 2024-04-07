@@ -2,6 +2,7 @@ package com.challenge.apicars.infra.exceptions;
 
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -14,7 +15,13 @@ public class ControllerExceptionHandler {
 
 	@ExceptionHandler(DataIntegrityViolationException.class)
 	public ResponseEntity<ExceptionDTO> threatDuplicateUser(DataIntegrityViolationException exception) {
-		ExceptionDTO exceptionDTO = new ExceptionDTO("User already exists", "400");
+		ExceptionDTO exceptionDTO = new ExceptionDTO("User already exists!", "400");
+		return ResponseEntity.badRequest().body(exceptionDTO);
+	}
+	
+	@ExceptionHandler(HttpMessageNotReadableException.class)
+	public ResponseEntity<ExceptionDTO> threatDuplicateCar(HttpMessageNotReadableException exception) {
+		ExceptionDTO exceptionDTO = new ExceptionDTO("Car already exists!", "400");
 		return ResponseEntity.badRequest().body(exceptionDTO);
 	}
 

@@ -6,13 +6,13 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import com.challenge.apicars.domain.entities.car.Car;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -66,14 +66,17 @@ public class User implements UserDetails, Serializable {
 	@Enumerated(EnumType.STRING)
 	private UserRole role;
 	
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "owner")
-	@JsonIgnore
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "user")
 	private List<Car> cars = new ArrayList<Car>();
 	
 	public User(String login, String password, UserRole role) {
 		this.login = login;
 		this.password = password;
 		this.role = role;
+	}
+	
+	public User(Long id) {
+		this.id = id;
 	}
 	
 	public User(UserDTO userDTO) {
@@ -87,7 +90,7 @@ public class User implements UserDetails, Serializable {
 		this.role = userDTO.getRole();
 		this.password = userDTO.getPassword();
 		this.phone = userDTO.getPhone();
-		this.cars = userDTO.getCars();
+		this.cars= userDTO.getCars().stream().map(car -> new Car(car)).collect(Collectors.toList());
 	}
 
 	@Override

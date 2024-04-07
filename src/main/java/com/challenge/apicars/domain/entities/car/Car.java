@@ -3,7 +3,6 @@ package com.challenge.apicars.domain.entities.car;
 import java.io.Serializable;
 
 import com.challenge.apicars.domain.entities.user.User;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -33,11 +32,10 @@ public class Car implements Serializable {
 	private Long id;
 
 	@ManyToOne()
-	@JsonIgnore
 	@JoinColumn(name = "user_id")
-	private User owner;
+	private User user;
 	
-	private Integer car_year;
+	private Integer yeear;
 	
 	@Column(unique = true)
 	private String licensePlate;
@@ -45,4 +43,13 @@ public class Car implements Serializable {
 	
 	private String model;
 	private String color;
+	
+	public Car(CarDTO carDTO) {
+		this.id = carDTO.getId();
+		this.user = new User(carDTO.getUser());
+		this.yeear = carDTO.getYeear();
+		this.licensePlate = carDTO.getLicensePlate();
+		this.model = carDTO.getModel();
+		this.color = carDTO.getColor();
+	}
 }
