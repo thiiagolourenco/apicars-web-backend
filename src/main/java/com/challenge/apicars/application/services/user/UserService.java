@@ -35,7 +35,7 @@ public class UserService {
 		if (!foundedUser.isEmpty()) {
 			return this.mapping.toDTO(foundedUser.get());
 		} else {
-			throw new Exception("Usuário não foi encontrado!");
+			throw new Exception("User not found!");
 		}
 	}
 	
@@ -57,7 +57,7 @@ public class UserService {
 			User savedUser = this.repository.save(editedUser);
 			return this.mapping.toDTO(savedUser);
 		} else {
-			throw new Exception("Não foi possível editar o usuário!");
+			throw new Exception("Unable to edit the user!");
 		} 
 	}
 }
