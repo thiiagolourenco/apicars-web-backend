@@ -53,7 +53,7 @@ Para que ficasse mais claro e simples no commit as estórias foram definidas com
 **2.** ESTÓRIAS RELACIONADAS COM USUÁRIO AUTENTICADO:
 
 - ✔️APICARS-06: EU COMO usuário já cadastrado QUERO me logar no sistema PARA utilizar todas as funcionalidades do mesmo. (POST)
-- ✔️APICARS-07: EU COMO usuário logado QUERO listar todos os meus carros PARA gerencia-los. (GET ou POST)
+- ✔️APICARS-07: EU COMO usuário logado QUERO listar todos os meus carros PARA gerencia-los. (GET)
 - ✔️APICARS-08: EU COMO usuário logado QUERO cadastrar um novo carro PARA que ele vá para a lista dos meus carros. (POST)
 - ✔️APICARS-09: EU COMO usuário logado QUERO buscar um carro pelo seu id PARA QUE ver as suas informações. (GET)
 - ✔️APICARS-10: EU COMO usuário logado QUERO remover um carro pelo seu id PARA QUE excluir suas informações. (DELETE)
