@@ -107,6 +107,31 @@ RESPONSE:
     "token": "lakjsgbf490gabpbaWSOEGÁHPOIUSBGHA=20481TRAPIÇUWGVEF"
 }
 ```
+**REGISTER**
+```
+URL:
+POST http://localhost:8080/auth/register
+```
+```
+BODY:
+{
+    "firstName": "Thiago",
+    "lastName": "Lourenço",
+    "email": "thiago@world.com",
+    "birthday": "1990-05-01",
+    "login": "thiagologin",
+    "password": "123456789",
+    "role": "ADMIN",
+    "phone": "988888888",
+    "cars": []
+}
+```
+```
+RESPONSE:
+{
+    "token": "lakjsgbf490gabpbaWSOEGÁHPOIUSBGHA=20481TRAPIÇUWGVEF"
+}
+```
 
 ## 📝 Autor
 
