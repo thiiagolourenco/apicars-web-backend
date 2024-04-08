@@ -114,6 +114,15 @@ Started AppConfig in xxxx seconds (JVM running for xxxx)
 
 Para realizar o deploy primeiro
 
+## 🐞 Testes unitários
+
+Foram utilizados o Junit e Mockito para desenvolver os testes unitário da aplicação, mas apenas um caso para cada serviço, pois como na maioria dos serviços utilizou-se os métodos do JPA não faz muito sentido criar muitos testes já que o próprio JPA se responsabiliza dos testes internamente.
+<br>
+Para rodar os teste unitários que foram criados basta ir na classe do teste, clicar com o botão direito e executar como JUnit test. Veja abaixo:
+<div style="display:flex;align-items:center;">
+    <img src="/src/main/resources/static/img/unit_test.png" title="Unit test" alt="Unit test" width="480px" />
+</div>
+
 ## 📝 Autor
 
 Por **Thiago Lourenço** dá uma olhadinha no [LinkedIn](https://www.linkedin.com/in/thiiagolourenco) e no meu [Medium](https://thiiagolourenco.medium.com/) ✌🏽 
