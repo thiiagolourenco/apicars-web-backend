@@ -8,7 +8,7 @@
   <a href="#-estórias-de-usuário">Estórias de usuário</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-pré-requisitos">Pré-requisitos</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-endpoints">Endpoints (Swagger)</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Swagger">Swagger</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-build">Buildando e executando</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-deploy">Deploy</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-autor">Autor</a>
@@ -89,7 +89,7 @@ Esse projeto foi desenvolvido utilizando o framework [Java Spring 3.2.4](https:/
 - Lombok,
 - Spring doc openapi (para geração do Swagger).
 
-## 📨 Endpoints (Swagger)
+## 📨 Swagger
 
 A API foi desenvolvida utilizando o **Swagger** para facilitar a documentação e entendimento. Se você quiser acessar para ver os detalhes de cada endpoint bas rodar a aplicação localmente e acessar [http://localhost:8080/swagger-ui/](http://localhost:8080/swagger-ui.html).
 
