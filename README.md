@@ -87,6 +87,7 @@ Esse projeto foi desenvolvido utilizando o framework [Java Spring 3.2.4](https:/
 - PostgreSQL Driver,
 - Spring Boot DevTools,
 - Lombok,
+- Spring Boot Starter Test (JUnit e Mockito),
 - Spring doc openapi (para geração do Swagger).
 
 ## 📨 Swagger
