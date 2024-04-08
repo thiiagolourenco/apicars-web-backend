@@ -36,7 +36,7 @@ public class CarTest {
 	@DisplayName("Should get Car successfully")
 	void findCarByIdSuccess() {
 		UserDTO userData = new UserDTO(
-        		(long) 1,
+        		(long) 2,
         		"Thiago",
         		"Lourenço",
         		"thiago@teste.com",
@@ -53,7 +53,7 @@ public class CarTest {
         this.entityManager.persist(new User(userData));
 		
 		
-		CarDTO carData = new CarDTO((long) 1, (long) 1, 2020, "QH6H98", "HB20S", "AZUL");
+		CarDTO carData = new CarDTO((long) 1, (long) 2, 2020, "QH6H98", "HB20S", "AZUL");
 
 		this.entityManager.persist(new Car(carData));
 
@@ -65,7 +65,7 @@ public class CarTest {
 	@Test
 	@DisplayName("Shouldn't get Car")
 	void findCarByIdError() {
-		Optional<Car> result = this.carRepository.findCarById((long) 1);
+		Optional<Car> result = this.carRepository.findCarById((long) 2);
 
 		assertThat(result.isEmpty()).isTrue();
 	}
