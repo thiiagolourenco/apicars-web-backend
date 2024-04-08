@@ -59,13 +59,12 @@ public class AuthorizationService implements UserDetailsService {
 		var token = tokenService.generateToken((User) auth.getPrincipal());
 
 		Optional<User> pastUser = this.userRepository.findUserByLogin(data.login());
-		if (!pastUser.isEmpty()) {
-			User editedUser = pastUser.get();
-			editedUser.setLastLogin(LocalDateTime.now());
-			this.userRepository.save(editedUser);
-		}
 
-		return ResponseEntity.ok(new LoginResponse(token));
+		User editedUser = pastUser.get();
+		editedUser.setLastLogin(LocalDateTime.now());
+		this.userRepository.save(editedUser);
+
+		return ResponseEntity.ok(new LoginResponse(token, editedUser));
 	}
 
 	public ResponseEntity<Object> register(@RequestBody @Valid UserDTO newUser) {
@@ -78,7 +77,8 @@ public class AuthorizationService implements UserDetailsService {
 
 		User savedUser = this.authorizationRepository.save(this.mapping.toUser(newUser));
 
-		return new ResponseEntity<Object>("A successfully created User with id " + savedUser.getId() + "!", HttpStatus.CREATED);
+		return new ResponseEntity<Object>("A successfully created User with id " + savedUser.getId() + "!",
+				HttpStatus.CREATED);
 	}
 
 }

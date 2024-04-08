@@ -1,4 +1,6 @@
 package com.challenge.apicars.application.services.authorization.model;
 
-public record LoginResponse(String token) {
+import com.challenge.apicars.domain.entities.user.User;
+
+public record LoginResponse(String token, User user) {
 }
