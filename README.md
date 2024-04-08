@@ -85,6 +85,29 @@ Esse projeto foi desenvolvido utilizando o framework [Java Spring 3.2.4](https:/
 - Spring Boot DevTools,
 - Lombok.
 
+## 📨 Endpoints
+
+Abaixo podemos ver todos os endpoints da nossa api:
+
+**LOGIN**
+```
+URL:
+POST http://localhost:8080/auth/login
+```
+```
+BODY:
+{
+    "login": "thiagologin",
+    "password": "123456789"
+}
+```
+```
+RESPONSE:
+{
+    "token": "lakjsgbf490gabpbaWSOEGÁHPOIUSBGHA=20481TRAPIÇUWGVEF"
+}
+```
+
 ## 📝 Autor
 
 Por **Thiago Lourenço** dá uma olhadinha no [LinkedIn](https://www.linkedin.com/in/thiiagolourenco) e no meu [Medium](https://thiiagolourenco.medium.com/) ✌🏽 
