@@ -45,7 +45,6 @@ public class Car implements Serializable {
 	private String color;
 	
 	public Car(CarDTO carDTO) {
-		this.id = carDTO.getId();
 		this.user = new User(carDTO.getUser());
 		this.yeear = carDTO.getYeear();
 		this.licensePlate = carDTO.getLicensePlate();
