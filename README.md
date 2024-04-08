@@ -15,7 +15,7 @@
 
 ## 💻 Projeto
 
-**API CARS** - Criação de uma API Rest de usuários e seus carros proposto no desafio técnico da vaga de Eng. De Software Pleno pela Pitang.
+**API CARS** - Criação de uma API Rest de usuários e seus carros proposto no desafio técnico.
 
 ## 💡 Solução
 
