@@ -8,6 +8,7 @@
   <a href="#-estórias-de-usuário">Estórias de usuário</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-pré-requisitos">Pré-requisitos</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-endpoints">Endpoints (Swagger)</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-autor">Autor</a>
 </p>
 
@@ -83,9 +84,10 @@ Esse projeto foi desenvolvido utilizando o framework [Java Spring 3.2.4](https:/
 - H2 Databse,
 - PostgreSQL Driver,
 - Spring Boot DevTools,
-- Lombok.
+- Lombok,
+- Spring doc openapi (para geração do Swagger).
 
-## 📨 Endpoints
+## 📨 Endpoints (Swagger)
 
 Abaixo podemos ver todos os endpoints da nossa api:
 
