@@ -89,51 +89,7 @@ Esse projeto foi desenvolvido utilizando o framework [Java Spring 3.2.4](https:/
 
 ## 📨 Endpoints (Swagger)
 
-Abaixo podemos ver todos os endpoints da nossa api:
-
-**LOGIN**
-```
-URL:
-POST http://localhost:8080/auth/login
-```
-```
-BODY:
-{
-    "login": "thiagologin",
-    "password": "123456789"
-}
-```
-```
-RESPONSE:
-{
-    "token": "lakjsgbf490gabpbaWSOEGÁHPOIUSBGHA=20481TRAPIÇUWGVEF"
-}
-```
-**REGISTER**
-```
-URL:
-POST http://localhost:8080/auth/register
-```
-```
-BODY:
-{
-    "firstName": "Thiago",
-    "lastName": "Lourenço",
-    "email": "thiago@world.com",
-    "birthday": "1990-05-01",
-    "login": "thiagologin",
-    "password": "123456789",
-    "role": "ADMIN",
-    "phone": "988888888",
-    "cars": []
-}
-```
-```
-RESPONSE:
-{
-    "token": "lakjsgbf490gabpbaWSOEGÁHPOIUSBGHA=20481TRAPIÇUWGVEF"
-}
-```
+A API foi desenvolvida utilizando o **Swagger** para facilitar a documentação e entendimento. Se você quiser acessar para ver os detalhes de cada endpoint bas rodar a aplicação localmente e acessar [http://localhost:8080/swagger-ui/](http://localhost:8080/swagger-ui.html).
 
 ## 📝 Autor
 
