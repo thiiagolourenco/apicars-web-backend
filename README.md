@@ -22,6 +22,8 @@
 <br/>
 <br/>
 **Obs.:** a url da API de produção pode ser utilizada através da URL: 🚗 https://apicars-web-backend.onrender.com
+<br/>
+**Obs².:** o projeto do frontend está no repositório: [Front-end](https://github.com/thiiagolourenco/apicars-web-frontend).
 
 ## 💡 Solução
 
