@@ -95,7 +95,7 @@ Esse projeto foi desenvolvido utilizando o framework [Java Spring 3.2.4](https:/
 
 ## 📨 Swagger
 
-A API foi desenvolvida utilizando o **Swagger** para facilitar a documentação e entendimento. Se você quiser acessar para ver os detalhes de cada endpoint bas rodar a aplicação localmente e acessar [http://localhost:8080/swagger-ui/](http://localhost:8080/swagger-ui.html).
+A API foi desenvolvida utilizando o **Swagger** para facilitar a documentação e entendimento. Se você quiser acessar para ver os detalhes de cada endpoint basta rodar a aplicação localmente e acessar [http://localhost:8080/swagger-ui/](http://localhost:8080/swagger-ui.html).
 
 ## 💻 Buildando e executando
 
