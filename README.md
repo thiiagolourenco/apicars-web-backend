@@ -71,7 +71,7 @@ Para contribuir com o projeto é necessário os seguintes requisitos:
 - GIT,
 - Java 17,
 - PostgreSQL 12 e PgAdmin,
-- Render CLI,
+- Render,
 - IDE Java da sua escolha (recomendação: [STS](https://spring.io/tools)),
 - Plataforma de API Rest da sua escolha (recomendação: [Postman](https://www.postman.com/downloads/)).
 
