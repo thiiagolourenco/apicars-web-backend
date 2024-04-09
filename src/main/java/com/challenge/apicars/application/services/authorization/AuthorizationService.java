@@ -64,7 +64,7 @@ public class AuthorizationService implements UserDetailsService {
 		editedUser.setLastLogin(LocalDateTime.now());
 		this.userRepository.save(editedUser);
 
-		return ResponseEntity.ok(new LoginResponse(token, editedUser));
+		return ResponseEntity.ok(new LoginResponse(token, editedUser.getFirstName(), editedUser.getId()));
 	}
 
 	public ResponseEntity<Object> register(@RequestBody @Valid UserDTO newUser) {
