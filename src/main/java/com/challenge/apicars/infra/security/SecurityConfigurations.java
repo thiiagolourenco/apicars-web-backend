@@ -45,13 +45,6 @@ public class SecurityConfigurations {
 						.requestMatchers(HttpMethod.PUT, "/api/users/{id}").permitAll()
 						.requestMatchers(SWAGGER_WHITELIST).permitAll()
 						.anyRequest().authenticated())
-						/*
-						 * .requestMatchers(HttpMethod.POST, "/api/cars").permitAll()
-						 * .requestMatchers(HttpMethod.GET, "/api/cars/by-user/{userId}").permitAll()
-						 * .requestMatchers(HttpMethod.GET, "/api/cars/{id}").permitAll()
-						 * .requestMatchers(HttpMethod.DELETE, "/api/cars/{id}").permitAll()
-						 * .requestMatchers(HttpMethod.PUT, "/api/cars/{id}").permitAll()
-						 */
 				.addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class).build();
 	}
 
