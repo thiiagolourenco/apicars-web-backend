@@ -1,9 +1,9 @@
 package com.challenge.apicars;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ContextConfiguration;
 
-@SpringBootTest
+@ContextConfiguration(classes = ApicarsApplicationTests.class)
 class ApicarsApplicationTests {
 
 	@Test
