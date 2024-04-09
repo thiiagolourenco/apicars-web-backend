@@ -168,7 +168,7 @@ Após isso você deve criar o seguinte arquivo na **raiz do projeto**:
 ```
 java.runtime.version=17
 ```
-Agora que já criamos todos os ambientes e suas configurações é só realizar o deploy no Render e adicionar as variáveis de ambiente.
+Agora que já criamos todos os ambientes e suas configurações é só realizar o deploy no Render e adicionar as variáveis de ambiente. Após isso, basta conectar o banco com o PgAdmin e rodar novamente os scrips acima para popular inicialmente o banco.
 
 ## 🐞 Testes unitários
 
