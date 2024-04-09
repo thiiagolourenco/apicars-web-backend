@@ -155,7 +155,7 @@ alter table if exists cars add constraint FKqw4c8e6nqrvy3ti1xj8w8wyc9 foreign ke
 ```
 Insert
 ```
-INSERT INTO users(first_name, last_name, email, birthday, login, password, role, created_at, lastLogin) VALUES ('Thiago', 'Lourenço', 'thiago@email.com', '08-04-2020', 'thiagologin', '123456789', 'ADMIN', '2024-04-08 12:00:00+00:00', '2024-04-08 12:00:00+00:00');
+INSERT INTO users(first_name, last_name, email, birthday, login, password, role, created_at, last_login) VALUES ('Thiago', 'Lourenço', 'thiago@email.com', '08-04-2020', 'thiagologin', '123456789', 'ADMIN', '2024-04-08 12:00:00+00:00', '2024-04-08 12:00:00+00:00');
 INSERT INTO cars(user_id, yeear, license_plate, model, color) VALUES (1, 2020, 'JY3PA23', 'Celta', 'AZUL');
 ```
 Depois de popular o banco é só testar uma requisição para ver se está tudo OK. Se estiver você deve trocar o conteúdo do application.properties para:
