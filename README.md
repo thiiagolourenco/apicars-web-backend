@@ -19,6 +19,8 @@
 ## 💻 Projeto
 
 **API CARS** - Criação de uma API Rest de usuários e seus carros proposto no desafio técnico.
+<br/>
+**Obs.:** a url da API de produção pode ser utilizada através da URL: 🚗 https://apicars-web-backend.onrender.com
 
 ## 💡 Solução
 
