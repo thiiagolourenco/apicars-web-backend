@@ -16,7 +16,7 @@
 
 <br>
 
-## ⚠️ AVISO: A 1ª REQUISIÇÃO DEMORA MAIS QUE O NORMAL. Isso acontece porque o deploy do serviço foi feito gratuitamente e quando não é usado ele é **\_desligado\_**
+## ⚠️ AVISO: A 1ª REQUISIÇÃO DEMORA MAIS QUE O NORMAL. Isso acontece porque o deploy do serviço foi feito gratuitamente e quando não é usado ele é **DESLIGADO**
 
 ## 💻 Projeto
 
