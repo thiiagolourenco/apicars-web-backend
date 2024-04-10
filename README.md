@@ -16,6 +16,8 @@
 
 <br>
 
+## ⚠️ AVISO: A 1ª REQUISIÇÃO DEMORA MAIS QUE O NORMAL. Isso acontece porque o deploy do serviço foi feito gratuitamente e quando não é usado ele é **\_desligado\_**
+
 ## 💻 Projeto
 
 **API CARS** - Criação de uma API Rest de usuários e seus carros proposto no desafio técnico.
